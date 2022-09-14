@@ -253,6 +253,25 @@
 
     <!-- scroll to top -->
     <button onclick="topFunction()" id="scrollbtn" title="Go to top">Top</button>
+    <button onclick="darkMode()" id="ratingid">dark</button>
+    <script>
+        let ratingid = document.getElementById("ratingid");
+        function darkMode(){
+            //for body
+            var element = document.body;
+            element.classList.toggle("dark-mode");
+
+            // for button 
+            if(ratingid.innerHTML.match("dark")){
+                ratingid.innerHTML = "light";
+                ratingid.style.backgroundColor = "white";
+            }else{
+                ratingid.innerHTML = "dark";
+                ratingid.style.backgroundColor = "black";
+            }
+            
+        }
+    </script>
     <script>
         // Get the button
         let mybutton = document.getElementById("scrollbtn");
